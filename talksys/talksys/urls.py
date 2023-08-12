@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('talkcore.urls')),
     path('', include('account.urls')),
-    path('', include('chats.urls'''))
+    path('', include('chat.urls'''))
 ]

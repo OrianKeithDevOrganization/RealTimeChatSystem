@@ -24,7 +24,7 @@ function getCookie(name) {
     if (document.cookie && document.cookie != '') {
         var cookies = document.cookie.split(';')
 
-        for (var i= 0; i < cookies.length; i++) {
+        for (var i= 0; i<cookies.length; i++) {
             var cookie = cookies[i].trim()
             if (cookie.substring(0, name.length + 1) === (name + '=')) {
                 cookieValue = decodeURIComponent(cookie.substring(name.length+1))
@@ -63,7 +63,7 @@ async function joinChatRoom() {
         console.log('data',data) 
     }) 
 
-    chatSocket = new WebSocket(`ws://${window.location.host}/ws/chat/${chatRoomUuid}/`) 
+    chatSocket = new WebSocket(`ws://${window.location.host}/ws/${chatRoomUuid}/`) 
 
     // Function for when we are getting a message on the backend
 
@@ -72,7 +72,7 @@ async function joinChatRoom() {
     }
 
     chatSocket.onopen = function(e) {
-        console.log('onClose - chat socket was opened')
+        console.log('onClose - chat socket was opend')
     }
 
     chatSocket.onclose = function(e) {

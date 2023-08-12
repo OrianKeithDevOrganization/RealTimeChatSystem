@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # installed apps
     'account.apps.AccountConfig',
     'talkcore.apps.TalkcoreConfig',
+    'chat.apps.ChatConfig',
 ]
 
 MIDDLEWARE = [
