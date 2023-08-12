@@ -6,18 +6,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/main.min.css' %}"> -->
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
     <body>
         <div class="p-2">
             <nav class="p-6 bg-rose-600 text-white flex justify-between items-center rounded-xl">
-                <a href="{% url 'core:index' %}" class="text-xl">TalkSys</a>
+                <a href="{% url 'talkcore:index' %}" class="text-xl">TalkSys</a>
 
                 <div class="flex items-center space-x-4">
-                    <a href="{% url 'core:index' %}">Home</a>
-                    <a href="{% url 'core:about' %}">About</a>
+                    <a href="{% url 'talkcore:index' %}">Home</a>
+                    <a href="{% url 'talkcore:about' %}">About</a>
                 </div>
             </nav>
 
