@@ -15,7 +15,7 @@ const chatRoomElement = document.querySelector('#chat_room')
 const chatNameElement = document.querySelector('#chat_name')
 const chatLogElement = document.querySelector('#chat_log')
 const chatInputElement = document.querySelector('#chat_message_input')
-const chatSubmitlement = document.querySelector('#chat_message_submit')
+const chatSubmitElement = document.querySelector('#chat_message_submit')
 
 
 function getCookie(name) {
@@ -154,7 +154,7 @@ chatJoinElement.onclick = function(e) {
 } 
 
 
-chatSubmitlement.onclick = function(e) {{
+chatSubmitElement.onclick = function(e) {{
     e.preventDefault()
     sendMessage()
     return false

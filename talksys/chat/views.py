@@ -22,7 +22,7 @@ def admin(request):
     users = User.objects.filter(is_staff=True)
     context = {
         'rooms':rooms,
-        'users':users,
+        'users':users
     }
     return render(request,'chat/admin.html',context=context)
 
@@ -37,7 +37,7 @@ def room(request, uuid):
         room.save()
 
     context = {
-        'room':room
+        'room':room,
     }
     return render(request,'chat/room.html',context=context) 
 
