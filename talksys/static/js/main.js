@@ -158,4 +158,11 @@ chatSubmitElement.onclick = function(e) {{
     e.preventDefault()
     sendMessage()
     return false
-}}
+}} 
+
+
+chatInputElement.onkeyup = function(e) {
+    if (e.keyCode == 13) {
+        sendMessage()
+    }
+}
