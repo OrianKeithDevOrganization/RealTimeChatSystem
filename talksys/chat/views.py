@@ -107,3 +107,16 @@ def edit_user(request,uuid):
         messages.error(request, "You don't have access to edit users !")
         return redirect('/chat-admin/') 
             
+@login_required
+def delete_room(request, uuid):
+    if request.user.has_perm('room.delete_room'):
+
+        room = Room.objects.get(uuid=uuid)
+        room.delete() 
+        messages.success(request,'Room deleted successfully !')
+        return redirect('/chat-admin/')
+
+
+    else: 
+        messages.error(request, "You don't have access to delete rooms !")
+        return redirect('/chat-admin/') 
