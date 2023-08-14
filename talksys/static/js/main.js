@@ -159,7 +159,7 @@ async function joinChatRoom() {
     }
 
     chatSocket.onopen = function(e) {
-        console.log('onClose - chat socket was opend')
+        console.log('onClose - chat socket was opened')
         
         scrollToBottom()
         
