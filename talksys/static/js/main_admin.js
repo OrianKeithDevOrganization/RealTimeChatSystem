@@ -104,3 +104,11 @@ chatInputElement.onkeyup = function(e) {
     }
 }
 
+chatInputElement.onfocus = function(e) {
+    chatSocket.send(JSON.stringify({
+        'type':'update',
+        'message': 'writing_active',
+        'name': document.querySelector('#user_name').textContent.replaceAll('"',''),
+        'agent': document.querySelector('#user_id').textContent.replaceAll('"',''),
+    }))
+}
